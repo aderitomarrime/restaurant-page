@@ -18,9 +18,7 @@ homeButton.addEventListener('click', ()=> {
 
 menuButton.addEventListener('click', ()=> {
     divContent.textContent = '';
-    for(const card of cards) {
-        makeMenu(card.imageSrc, card.title, card.paragraph, card.button);
-    }
+    makeMenu()
 })
 
 aboutButton.addEventListener('click', ()=> {

@@ -19,7 +19,7 @@ cards.push(new Card("Fried Rice","A staple dish made by stir-frying cooked rice 
 
 cards.push(new Card("Dim Sum","A  Cantonese tradition featuring a parade of bite-sized delights served in bamboo baskets. From steamed shrimp dumplings (har gow) to BBQ pork buns (char siu bao), there are over a thousand variations. Perfect for sharing with friends and family.",dimSumSrc))
 
-function makeMenu(imgSrc, myTitle, myParagraph, myButton) {
+function makeCard(imgSrc, myTitle, myParagraph, myButton) {
     let divContent = document.querySelector('#content');
 
     const card = document.createElement('div');
@@ -41,6 +41,12 @@ function makeMenu(imgSrc, myTitle, myParagraph, myButton) {
     card.appendChild(button);
 
     divContent.appendChild(card);
+}
+
+function makeMenu() {
+    for(const card of cards) {
+        makeCard(card.imageSrc, card.title, card.paragraph, card.button);
+    }
 }
 
 export {cards, makeMenu};
