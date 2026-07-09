@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    display: flex;
+    gap: calc(var(--spacing)*4);
+    padding-block: calc(var(--spacing)*8);
+}
+
+#content .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#content .text h1 {
+    margin-bottom: calc(var(--spacing)*4);
+    color: var(--secondary);
+    font-size: var(--fs-3xl);
+    line-height: var(--lh-3xl);
+}
+
+#content .text h2 {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    color: var(--txt-black);
+    letter-spacing: var(--ls-lg);
+    text-indent: 4px;
+}
+
+#content .text p {
+    margin-bottom: calc(var(--spacing)*4);
+    width: 60ch;
+    color: var(--txt-black);
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+}
+
+#content .text button {
+    width: 160px;
+    border: none;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: var(--radius-btn);
+    padding-inline: calc(var(--spacing)*1);
+    padding-block: calc(var(--spacing)*2);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    position: relative;
+    /* z-index: 1; */
+}
+
+#content .text button::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border: solid 1.5px black;
+    width: 100%;
+    height: 95%;
+    z-index: -1;
+    left: -4px;
+    border-radius: var(--radius-btn);
+}
+
+#content .text button:hover {
+    background-color: color-mix(in srgb, var(--secondary) 90%, white);
+}
+
+#content .img {
+    display: flex;
+    align-items: center;
+}
+
+#content .img img {
+    width: calc(var(--spacing)*190);
+}

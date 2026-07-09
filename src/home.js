@@ -1,3 +1,4 @@
+import "./styles/home.css";
 import imageSrc from "./images/chinese-food.png";
 
 function makeHome() {

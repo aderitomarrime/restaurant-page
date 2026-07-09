@@ -16,6 +16,7 @@ makeHome()
 homeButton.addEventListener('click', ()=> {
     divContent.textContent = '';
     makeHome()
+    
 })
 
 menuButton.addEventListener('click', ()=> {

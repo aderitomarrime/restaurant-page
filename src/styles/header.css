@@ -140,6 +140,7 @@ header h1 {
     font-size: var(--fs-2xl);
     line-height: var(--lh-2xl);
     color: var(--secondary);
+    user-select: none;
 }
 
 header nav {
