@@ -1,8 +1,8 @@
-import imageSrc from "./chinese-food.png";
+import imageSrc from "./images/chinese-food.png";
 
 function makeHome() {
 
-    const divContent = document.querySelector('#content');
+    let divContent = document.querySelector('#content');
 
     const textContainer = document.createElement('div');
     const imgContainer = document.createElement('div');
@@ -15,7 +15,7 @@ function makeHome() {
     textContainer.classList.add('text');
     imgContainer.classList.add('img');
 
-    title.textContent = "Restaurant Chinese";
+    title.textContent = "Asian Restaurant";
     subTitle.textContent = "A bowl of love from";
     paragraph.textContent = "Restaurant professional with a deep passion for authentic Chinese cuisine. Dedicated to preserving traditional recipes while delivering a modern dining experience that exceeds expectations.";
     button.textContent = "Order Now"
