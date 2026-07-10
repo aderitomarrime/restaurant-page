@@ -34,6 +34,7 @@ function makeCard(imgSrc, myTitle, myParagraph, myButton) {
     card.classList.add('card');
     imageContainer.classList.add('image-container');
     divContent.classList.add('menu');
+    divContent.classList.remove('about-us')
 
     image.src = imgSrc;
     title.textContent = myTitle;
