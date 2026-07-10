@@ -1,3 +1,5 @@
+import "./styles/menu.css";
+
 import yakisobaSrc from "./images/yakisoba.png";
 import friedRiceSrc from "./images/fried-rice.png";
 import dimSumSrc from "./images/dim-sum.png";
@@ -13,29 +15,33 @@ class Card {
 
 const cards = [];
 
-cards.push(new Card("Yakisoba","Yakisoba brings together stir-fried wheat noodles with thinly sliced pork, crisp vegetables like cabbage, carrots, and bean sprouts, all coated in a tangy, savory sauce that's sweet, salty, and packed with umami.", yakisobaSrc));
+cards.push(new Card("Yakisoba","Stir-fried wheat noodles with pork, cabbage, and carrots in a sweet, savory umami sauce.", yakisobaSrc));
 
-cards.push(new Card("Fried Rice","A staple dish made by stir-frying cooked rice with eggs, vegetables, and proteins like chicken, shrimp, or pork. Quick, versatile, and full of flavour, Yangzhou fried rice with ham, shrimp, and peas is one of the most famous versions.", friedRiceSrc))
+cards.push(new Card("Fried Rice","Quick stir-fried rice with eggs, veggies, and protein. Famous Yangzhou version includes ham, shrimp, and peas.", friedRiceSrc))
 
-cards.push(new Card("Dim Sum","A  Cantonese tradition featuring a parade of bite-sized delights served in bamboo baskets. From steamed shrimp dumplings (har gow) to BBQ pork buns (char siu bao), there are over a thousand variations. Perfect for sharing with friends and family.",dimSumSrc))
+cards.push(new Card("Dim Sum","Cantonese bite-sized delights in bamboo baskets, like har gow and char siu bao. Over 1,000 variations, perfect for sharing.", dimSumSrc))
 
 function makeCard(imgSrc, myTitle, myParagraph, myButton) {
     let divContent = document.querySelector('#content');
 
     const card = document.createElement('div');
+    const imageContainer = document.createElement('div');
     const image = document.createElement('img');
     const title = document.createElement('h1');
     const paragraph = document.createElement('p');
     const button = document.createElement('button');
 
-    card.classList.add('card')
+    card.classList.add('card');
+    imageContainer.classList.add('image-container');
+    divContent.classList.add('menu');
 
     image.src = imgSrc;
     title.textContent = myTitle;
     paragraph.textContent = myParagraph;
     button.textContent = myButton;
 
-    card.appendChild(image);
+    card.appendChild(imageContainer);
+    imageContainer.appendChild(image);
     card.appendChild(title);
     card.appendChild(paragraph);
     card.appendChild(button);

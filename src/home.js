@@ -15,6 +15,7 @@ function makeHome() {
 
     textContainer.classList.add('text');
     imgContainer.classList.add('img');
+    divContent.classList.remove('menu');
 
     title.textContent = "Asian Restaurant";
     subTitle.textContent = "A bowl of love from";

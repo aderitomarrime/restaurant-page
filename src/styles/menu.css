@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#content.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: calc(var(--spacing)*4);
+    padding-block: calc(var(--spacing)*12);
+}
+
+#content.menu .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    border: 1px solid var(--txt-black);
+    border-radius: 6px;
+    padding: 0.6rem;
+    text-align: center;
+    row-gap: 1rem;
+}
+
+#content.menu .card .image-container img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+#content.menu .card h1 {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+    color: var(--txt-black);
+    letter-spacing: var(--ls-lg);
+}
+
+#content.menu .card p {
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+    color: var(--txt-black);
+    letter-spacing: var(--ls-md);
+    opacity: 0.7;
+}
+
+#content.menu .card button {
+    border: none;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: var(--radius-btn);
+    padding-inline: calc(var(--spacing)*1);
+    padding-block: calc(var(--spacing)*1);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+#content.menu .card button:hover {
+    background-color: color-mix(in srgb, var(--secondary) 90%, white);
+}
