@@ -1,0 +1,7 @@
+#content.about-us {
+    display: flex;
+    flex-direction: column;
+    padding-block: calc(var(--spacing)*18);
+    width: 70ch;
+    
+}
